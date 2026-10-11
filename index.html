@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Les privat ke rumah di Mataram dan sekitarnya bersama Bunda Iin (St. Mutmainah, S.Pd., M.Pd.). Jadwal sore, weekday atau weekend. WA +62 823-2303-3171.">
+<meta name="description" content="Les privat ke rumah di Mataram dan sekitarnya bersama Bunda Iin (St. Mutmainah, S.Pd., M.Pd.). Jadwal sore hari, pada hari kerja (weekday) maupun akhir pekan (weekend). WA +62 823-2303-3171.">
 <meta name="theme-color" content="#0f4c45">
 <meta property="og:title" content="Les Privat Bunda Iin – Guru Datang ke Rumah">
 <meta property="og:description" content="Les privat ke rumah di Mataram & sekitarnya. Pembimbing siswa lolos OSN nasional, lulusan S2 Manajemen Pendidikan UIN Mataram.">
@@ -97,14 +97,14 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
   <text class="disp" x="28" y="108" fill="#ffffff" font-size="38" font-weight="800">Guru Datang</text>
   <text class="disp" x="28" y="148" fill="#ffffff" font-size="38" font-weight="800">ke Rumah</text>
   <path d="M30 160 q60 -10 120 0 t110 -2" fill="none" stroke="#f2b632" stroke-width="4" stroke-linecap="round"/>
-  <text x="28" y="190" fill="#cfe5e0" font-size="14">Belajar tenang di rumah sendiri,</text>
-  <text x="28" y="209" fill="#cfe5e0" font-size="14">didampingi guru berpengalaman.</text>
+  <text x="28" y="190" fill="#cfe5e0" font-size="14">Belajar dengan nyaman di rumah,</text>
+  <text x="28" y="209" fill="#cfe5e0" font-size="14">didampingi pengajar berpengalaman.</text>
 
   <!-- teacher card -->
   <rect x="20" y="230" width="360" height="74" rx="12" fill="#ffffff"/>
   <text x="38" y="258" fill="#4d6661" font-size="11" font-weight="700" letter-spacing="1.5">PENGAJAR</text>
   <rect x="226" y="240" width="140" height="26" rx="13" fill="#0f4c45"/>
-  <text x="296" y="258" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Panggil: <tspan fill="#f2b632" font-weight="800">Bunda Iin</tspan></text>
+  <text x="296" y="258" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Sapaan: <tspan fill="#f2b632" font-weight="800">Bunda Iin</tspan></text>
   <text class="disp" x="38" y="286" fill="#0f4c45" font-size="21" font-weight="800">St. Mutmainah, S.Pd., M.Pd.</text>
 
   <!-- credentials: tap to expand -->
@@ -115,7 +115,7 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
   <text x="28" y="480" fill="#f2b632" font-size="12" font-weight="700" letter-spacing="2">JADWAL</text>
   <g id="days"></g>
   <text x="28" y="540" fill="#ffffff" font-size="14" font-weight="700">☀ Sore hari</text>
-  <text x="120" y="540" fill="#cfe5e0" font-size="13">· menyesuaikan jadwal siswa</text>
+  <text x="120" y="540" fill="#cfe5e0" font-size="13">· disesuaikan dengan jadwal siswa</text>
 
   <!-- area -->
   <rect x="20" y="560" width="360" height="44" rx="22" fill="#f2b632"/>
@@ -129,7 +129,7 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
   <text x="372" y="634" fill="#cfe5e0" font-size="12" text-anchor="end">iinmutmainah626@gmail.com</text>
   </g>
 </svg>
-<p class="hint">Ketuk baris pendidikan atau pengalaman untuk membaca detailnya.</p>
+<p class="hint">Ketuk salah satu baris di atas untuk melihat keterangan lengkap.</p>
 
 <div class="sheet" id="sheet" hidden>
   <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sh-title">
@@ -144,7 +144,7 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
 </div>
 
 <section class="panel" aria-labelledby="ph">
-  <h2 id="ph">Tanya jadwal les</h2>
+  <h2 id="ph">Tanyakan jadwal les</h2>
   <div>
     <p class="lbl">Hari yang diinginkan</p>
     <div class="chips" id="dayChips">
@@ -164,7 +164,7 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
     <p class="lbl">Pesan untuk dikirim</p>
     <p class="msg" id="msg"></p>
   </div>
-  <a class="btn wa" id="wa" href="https://wa.me/6282323033171" target="_blank" rel="noopener">Kirim lewat WhatsApp</a>
+  <a class="btn wa" id="wa" href="https://wa.me/6282323033171" target="_blank" rel="noopener">Kirim melalui WhatsApp</a>
   <button class="btn alt" id="copy" type="button">Salin pesan</button>
   <p class="ok" id="ok" aria-live="polite"></p>
   <div class="contact">
@@ -177,22 +177,22 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
 <script>
 const NS="http://www.w3.org/2000/svg";
 const creds=[
-  ["🏆","Membimbing siswa lolos OSN nasional","",
+  ["🏆","Pembimbing siswa lolos OSN nasional","",
    "Prestasi membimbing siswa",
-   "Saat mengajar di SDIT Abata 2 Lombok, Bunda Iin membimbing siswanya dalam persiapan Olimpiade Sains Nasional (OSN) hingga lolos ke tingkat nasional.",
-   ["Pembimbing siswa SDIT Abata 2 Lombok untuk OSN","Siswa bimbingan berhasil lolos ke tingkat nasional","Terbiasa melatih anak bernalar dan memecahkan soal dengan tekun"],true],
+   "Selama mengajar di SDIT Abata 2 Lombok, Bunda Iin membimbing siswa dalam persiapan Olimpiade Sains Nasional (OSN) hingga berhasil lolos ke tingkat nasional.",
+   ["Pembimbing OSN bagi siswa SDIT Abata 2 Lombok","Siswa bimbingan berhasil lolos ke tingkat nasional","Terbiasa melatih kemampuan bernalar dan pemecahan soal secara tekun"],true],
   ["🎓","Lulusan S2 Manajemen Pendidikan","Magister (M.Pd.) dari UIN Mataram.",
    "Pendidikan",
-   "Bunda Iin menyelesaikan pendidikan sarjana pendidikan (S.Pd.), lalu melanjutkan ke jenjang magister di Program Studi Manajemen Pendidikan, UIN Mataram, dengan gelar M.Pd.",
-   ["S1 Pendidikan, gelar S.Pd.","S2 Manajemen Pendidikan, UIN Mataram, gelar M.Pd.","Bekal untuk menyusun rencana belajar yang terarah dan memantau perkembangan anak"]],
-  ["🏫","Mantan guru & wali kelas","2 tahun di SDIT Abata 2 Lombok.",
+   "Bunda Iin menyelesaikan pendidikan sarjana (S.Pd.) dan melanjutkan ke jenjang magister pada Program Studi Manajemen Pendidikan, UIN Mataram (M.Pd.).",
+   ["S1 Pendidikan, gelar S.Pd.","S2 Manajemen Pendidikan, UIN Mataram, gelar M.Pd.","Bekal untuk menyusun rencana belajar yang terarah dan memantau perkembangan siswa"]],
+  ["🏫","Berpengalaman sebagai guru dan wali kelas","Dua tahun di SDIT Abata 2 Lombok.",
    "Pengalaman mengajar di sekolah",
-   "Selama 2 tahun, Bunda Iin mengajar sekaligus menjadi wali kelas di SDIT Abata 2 Lombok. Sebagai wali kelas, beliau mendampingi satu kelas secara penuh dan menjadi penghubung antara sekolah dan orang tua.",
-   ["Guru di SDIT Abata 2 Lombok selama 2 tahun","Wali kelas yang mendampingi siswa sehari-hari","Terbiasa berkomunikasi dengan orang tua tentang perkembangan anak"]],
-  ["📚","Berpengalaman les privat","Sudah pernah mengajar les privat paruh waktu.",
+   "Selama dua tahun, Bunda Iin mengajar sekaligus menjabat sebagai wali kelas di SDIT Abata 2 Lombok. Sebagai wali kelas, beliau mendampingi satu kelas secara penuh dan menjadi penghubung antara sekolah dan wali murid.",
+   ["Guru di SDIT Abata 2 Lombok selama dua tahun","Wali kelas yang mendampingi siswa setiap hari","Terbiasa berkomunikasi dengan wali murid mengenai perkembangan siswa"]],
+  ["📚","Berpengalaman mengajar les privat","Pernah mengajar les privat secara paruh waktu.",
    "Pengalaman les privat",
-   "Di luar sekolah, Bunda Iin juga pernah mengajar les privat secara paruh waktu. Belajar satu-satu membuat materi bisa disesuaikan dengan kebutuhan dan kecepatan belajar tiap anak.",
-   ["Pernah mengajar les privat paruh waktu","Pendampingan satu guru untuk satu siswa","Guru datang ke rumah, sore hari, jadwal menyesuaikan"]]
+   "Di luar sekolah, Bunda Iin juga pernah mengajar les privat secara paruh waktu. Pembelajaran satu per satu memungkinkan materi disesuaikan dengan kebutuhan dan kecepatan belajar masing-masing siswa.",
+   ["Pernah mengajar les privat paruh waktu","Pendampingan satu guru untuk satu siswa","Pengajar datang ke rumah pada sore hari; jadwal disesuaikan"]]
 ];
 const sheet=document.getElementById("sheet");
 let lastFocus=null;
@@ -225,6 +225,8 @@ creds.forEach((c,i)=>{
   grp.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}});
   g.append(grp);
 });
+// keep long titles clear of the arrow at x=362
+document.fonts.ready.then(()=>g.querySelectorAll(".cred text[font-weight=\"800\"]").forEach(t=>{if(t.getComputedTextLength()>290){t.setAttribute("textLength",290);t.setAttribute("lengthAdjust","spacingAndGlyphs")}}));
 
 const daysG=document.getElementById("days");
 const labels=[["Weekday","Sen–Jum"],["Weekend","Sab–Min"]];
@@ -240,14 +242,14 @@ const kelas=document.getElementById("kelas"),lokasi=document.getElementById("lok
 function render(){
   chips.forEach((c,i)=>{const on=c.getAttribute("aria-pressed")==="true";pills[i][0].setAttribute("fill",on?"#f2b632":"none");pills[i][1].setAttribute("fill",on?"#0f4c45":"#f2b632")});
   const hari=chips.filter(c=>c.getAttribute("aria-pressed")==="true").map(c=>c.dataset.v);
-  msg.textContent=`Assalamu'alaikum Bunda Iin,\nsaya ingin bertanya tentang les privat ke rumah untuk anak saya (${kelas.value.trim()||"kelas …"}).\nHari: ${hari.length?hari.join(" atau "):"fleksibel"}, sore hari.\nLokasi: ${lokasi.value.trim()||"…"}.\nApakah masih ada jadwal yang kosong? Terima kasih.`;
+  msg.textContent=`Assalamu'alaikum Wr. Wb.\nYth. Bunda Iin,\nSaya ingin menanyakan layanan les privat ke rumah untuk anak saya (${kelas.value.trim()||"kelas …"}).\nHari: ${hari.length?hari.join(" atau "):"fleksibel"}, sore hari.\nLokasi: ${lokasi.value.trim()||"…"}.\nApakah masih tersedia jadwal kosong? Terima kasih atas perhatiannya.`;
   document.getElementById("wa").href="https://wa.me/6282323033171?text="+encodeURIComponent(msg.textContent);
 }
 chips.forEach(c=>c.addEventListener("click",()=>{c.setAttribute("aria-pressed",c.getAttribute("aria-pressed")==="true"?"false":"true");render()}));
 kelas.addEventListener("input",render);lokasi.addEventListener("input",render);
 document.getElementById("copy").addEventListener("click",()=>{
   const ok=document.getElementById("ok");
-  navigator.clipboard.writeText(msg.textContent).then(()=>ok.textContent="Pesan tersalin. Tempel di WhatsApp untuk dikirim.").catch(()=>{const s=getSelection(),r=document.createRange();r.selectNodeContents(msg);s.removeAllRanges();s.addRange(r);ok.textContent="Teks sudah ditandai, silakan salin manual."});
+  navigator.clipboard.writeText(msg.textContent).then(()=>ok.textContent="Pesan telah disalin. Silakan tempel di WhatsApp untuk mengirimkannya.").catch(()=>{const s=getSelection(),r=document.createRange();r.selectNodeContents(msg);s.removeAllRanges();s.addRange(r);ok.textContent="Teks telah ditandai. Silakan salin secara manual."});
 });
 render();
 </script>
