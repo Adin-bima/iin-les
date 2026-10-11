@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Les privat ke rumah di Mataram dan sekitarnya bersama Bunda Iin (St. Mutmainah, S.Pd., M.Pd.). Jadwal sore hari, pada hari kerja (weekday) maupun akhir pekan (weekend). WA +62 823-2303-3171.">
+<meta name="description" content="Les privat ke rumah di Mataram dan sekitarnya: paket Calistung dan paket Mata Pelajaran bersama Bunda Iin (St. Mutmainah, S.Pd., M.Pd.). Jadwal sore hari, pada hari kerja (weekday) maupun akhir pekan (weekend). WA +62 823-2303-3171.">
 <meta name="theme-color" content="#0f4c45">
 <meta property="og:title" content="Les Privat Bunda Iin – Guru Datang ke Rumah">
-<meta property="og:description" content="Les privat ke rumah di Mataram & sekitarnya. Pembimbing siswa lolos OSN nasional, lulusan S2 Manajemen Pendidikan UIN Mataram.">
+<meta property="og:description" content="Les privat ke rumah di Mataram & sekitarnya. Tersedia paket Calistung dan paket Mata Pelajaran.">
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>Les Privat Bunda Iin</title>
@@ -39,6 +39,9 @@ body{background:var(--page);color:var(--ink);font-family:var(--body);font-size:1
 .cred.gold:hover rect.bg,.cred.gold:focus rect.bg{fill:#ffcd52}
 .cred:focus{outline:none}
 .cred:focus-visible rect.bg{stroke:#f2b632;stroke-width:2}
+.tcard{cursor:pointer}
+.tcard:focus{outline:none}
+.tcard:focus-visible rect.card{stroke:#f2b632;stroke-width:3}
 .hint{font-size:13px;color:var(--muted);text-align:center;margin:-8px 0 0}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px}
 .panel h2{font-family:var(--display);font-size:20px;margin:0;text-wrap:balance}
@@ -72,7 +75,7 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
 </head>
 <body>
 <div class="wrap">
-<svg class="poster" viewBox="0 0 400 744" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pt">
+<svg class="poster" viewBox="0 0 400 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pt">
   <title id="pt">Pamflet les privat ke rumah bersama St. Mutmainah, S.Pd., M.Pd.</title>
   <defs>
     <pattern id="weave" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -80,10 +83,10 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
       <circle cx="10" cy="10" r="1.6" fill="#f2b632" opacity=".5"/>
     </pattern>
   </defs>
-  <rect width="400" height="744" fill="#0f4c45"/>
+  <rect width="400" height="700" fill="#0f4c45"/>
   <!-- songket band -->
   <rect y="0" width="400" height="22" fill="url(#weave)"/>
-  <rect y="722" width="400" height="22" fill="url(#weave)"/>
+  <rect y="678" width="400" height="22" fill="url(#weave)"/>
 
   <!-- house + book mark -->
   <g transform="translate(316 44)">
@@ -101,16 +104,19 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
   <text x="28" y="209" fill="#cfe5e0" font-size="14">didampingi pengajar berpengalaman.</text>
 
   <!-- teacher card -->
-  <rect x="20" y="230" width="360" height="74" rx="12" fill="#ffffff"/>
+  <g id="tcard" class="tcard" tabindex="0" role="button" aria-label="Profil pengajar: St. Mutmainah, S.Pd., M.Pd.">
+  <rect class="card" x="20" y="230" width="360" height="74" rx="12" fill="#ffffff"/>
   <text x="38" y="258" fill="#4d6661" font-size="11" font-weight="700" letter-spacing="1.5">PENGAJAR</text>
   <rect x="226" y="240" width="140" height="26" rx="13" fill="#0f4c45"/>
   <text x="296" y="258" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Sapaan: <tspan fill="#f2b632" font-weight="800">Bunda Iin</tspan></text>
   <text class="disp" x="38" y="286" fill="#0f4c45" font-size="21" font-weight="800">St. Mutmainah, S.Pd., M.Pd.</text>
+  <text class="pulse" x="364" y="292" fill="#0f4c45" font-size="16" font-weight="700" text-anchor="middle">›</text>
+  </g>
 
-  <!-- credentials: tap to expand -->
+  <!-- packages and info rows: tap to expand -->
   <g id="creds"></g>
 
-  <g transform="translate(0 44)">
+  <g>
   <!-- schedule -->
   <text x="28" y="480" fill="#f2b632" font-size="12" font-weight="700" letter-spacing="2">JADWAL</text>
   <g id="days"></g>
@@ -129,7 +135,7 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
   <text x="372" y="634" fill="#cfe5e0" font-size="12" text-anchor="end">iinmutmainah626@gmail.com</text>
   </g>
 </svg>
-<p class="hint">Ketuk salah satu baris di atas untuk melihat keterangan lengkap.</p>
+<p class="hint">Ketuk salah satu paket atau nama pengajar untuk melihat keterangan lengkap.</p>
 
 <div class="sheet" id="sheet" hidden>
   <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sh-title">
@@ -145,6 +151,18 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
 
 <section class="panel" aria-labelledby="ph">
   <h2 id="ph">Tanyakan jadwal les</h2>
+  <div>
+    <p class="lbl">Jenis kelas</p>
+    <div class="chips" id="typeChips">
+      <button class="chip" type="button" aria-pressed="true" data-v="calistung">Calistung</button>
+      <button class="chip" type="button" aria-pressed="false" data-v="mapel">Mata pelajaran</button>
+    </div>
+    <p class="hint" id="typeNote" style="text-align:left;margin:6px 0 0">Calistung: membaca, menulis, dan berhitung.</p>
+  </div>
+  <div id="mapelBox" hidden>
+    <label class="lbl" for="mapel">Mata pelajaran</label>
+    <input id="mapel" placeholder="contoh: Matematika, IPA" value="Matematika">
+  </div>
   <div>
     <p class="lbl">Hari yang diinginkan</p>
     <div class="chips" id="dayChips">
@@ -177,23 +195,22 @@ input{width:100%;box-sizing:border-box;font:15px var(--body);padding:10px 12px;b
 <script>
 const NS="http://www.w3.org/2000/svg";
 const creds=[
-  ["🏆","Pembimbing siswa lolos OSN nasional","",
-   "Prestasi membimbing siswa",
-   "Selama mengajar di SDIT Abata 2 Lombok, Bunda Iin membimbing siswa dalam persiapan Olimpiade Sains Nasional (OSN) hingga berhasil lolos ke tingkat nasional.",
-   ["Pembimbing OSN bagi siswa SDIT Abata 2 Lombok","Siswa bimbingan berhasil lolos ke tingkat nasional","Terbiasa melatih kemampuan bernalar dan pemecahan soal secara tekun"],true],
-  ["🎓","Lulusan S2 Manajemen Pendidikan","Magister (M.Pd.) dari UIN Mataram.",
-   "Pendidikan",
-   "Bunda Iin menyelesaikan pendidikan sarjana (S.Pd.) dan melanjutkan ke jenjang magister pada Program Studi Manajemen Pendidikan, UIN Mataram (M.Pd.).",
-   ["S1 Pendidikan, gelar S.Pd.","S2 Manajemen Pendidikan, UIN Mataram, gelar M.Pd.","Bekal untuk menyusun rencana belajar yang terarah dan memantau perkembangan siswa"]],
-  ["🏫","Berpengalaman sebagai guru dan wali kelas","Dua tahun di SDIT Abata 2 Lombok.",
-   "Pengalaman mengajar di sekolah",
-   "Selama dua tahun, Bunda Iin mengajar sekaligus menjabat sebagai wali kelas di SDIT Abata 2 Lombok. Sebagai wali kelas, beliau mendampingi satu kelas secara penuh dan menjadi penghubung antara sekolah dan wali murid.",
-   ["Guru di SDIT Abata 2 Lombok selama dua tahun","Wali kelas yang mendampingi siswa setiap hari","Terbiasa berkomunikasi dengan wali murid mengenai perkembangan siswa"]],
-  ["📚","Berpengalaman mengajar les privat","Pernah mengajar les privat secara paruh waktu.",
-   "Pengalaman les privat",
-   "Di luar sekolah, Bunda Iin juga pernah mengajar les privat secara paruh waktu. Pembelajaran satu per satu memungkinkan materi disesuaikan dengan kebutuhan dan kecepatan belajar masing-masing siswa.",
-   ["Pernah mengajar les privat paruh waktu","Pendampingan satu guru untuk satu siswa","Pengajar datang ke rumah pada sore hari; jadwal disesuaikan"]]
+  ["🔤","Paket Calistung","Baca, tulis, dan hitung dasar.",
+   "Paket Calistung",
+   "Kelas pendampingan dasar membaca, menulis, dan berhitung, dengan tempo yang disesuaikan dengan kemampuan awal masing-masing siswa.",
+   ["Pengenalan huruf, suku kata, dan angka","Latihan membaca lancar dan menulis rapi","Berhitung dasar secara bertahap","Pembelajaran satu guru untuk satu siswa di rumah"],true],
+  ["📘","Paket Mata Pelajaran","Pendampingan mapel sekolah.",
+   "Paket Mata Pelajaran",
+   "Kelas pendampingan mata pelajaran sekolah. Mata pelajaran dipilih sesuai kebutuhan siswa, misalnya Matematika atau IPA.",
+   ["Pendampingan pekerjaan rumah dan pemahaman materi","Persiapan ulangan dan ujian sekolah","Mata pelajaran dan kelas disesuaikan dengan kebutuhan siswa","Pembelajaran satu guru untuk satu siswa di rumah"],true],
+  ["🏠","Sistem belajar","Guru datang ke rumah, sore hari.",
+   "Sistem belajar",
+   "Seluruh kelas dilaksanakan secara privat di rumah siswa, sehingga siswa dapat belajar dengan nyaman tanpa perlu bepergian.",
+   ["Pengajar datang ke rumah pada sore hari","Jadwal disesuaikan dengan kegiatan siswa","Tersedia pada hari kerja (weekday) maupun akhir pekan (weekend)","Melayani Mataram dan sekitarnya"]]
 ];
+const teacher=["🎓","Profil pengajar","","Profil pengajar",
+   "Bunda Iin (St. Mutmainah, S.Pd., M.Pd.) adalah lulusan magister Manajemen Pendidikan UIN Mataram dengan pengalaman mengajar di sekolah dan les privat.",
+   ["Berpengalaman sebagai guru dan wali kelas selama dua tahun di SDIT Abata 2 Lombok","Membimbing siswa hingga lolos OSN tingkat nasional","Pernah mengajar les privat secara paruh waktu","Terbiasa berkomunikasi dengan wali murid mengenai perkembangan siswa"]];
 const sheet=document.getElementById("sheet");
 let lastFocus=null;
 function openSheet(c){
@@ -228,6 +245,10 @@ creds.forEach((c,i)=>{
 // keep long titles clear of the arrow at x=362
 document.fonts.ready.then(()=>g.querySelectorAll(".cred text[font-weight=\"800\"]").forEach(t=>{if(t.getComputedTextLength()>290){t.setAttribute("textLength",290);t.setAttribute("lengthAdjust","spacingAndGlyphs")}}));
 
+const tc=document.getElementById("tcard");
+tc.addEventListener("click",()=>openSheet(teacher));
+tc.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openSheet(teacher)}});
+
 const daysG=document.getElementById("days");
 const labels=[["Weekday","Sen–Jum"],["Weekend","Sab–Min"]];
 const pills=labels.map((d,i)=>{
@@ -238,14 +259,22 @@ const pills=labels.map((d,i)=>{
 });
 
 const chips=[...document.querySelectorAll("#dayChips .chip")];
+const typeChips=[...document.querySelectorAll("#typeChips .chip")];
+const mapel=document.getElementById("mapel"),mapelBox=document.getElementById("mapelBox"),typeNote=document.getElementById("typeNote");
 const kelas=document.getElementById("kelas"),lokasi=document.getElementById("lokasi"),msg=document.getElementById("msg");
 function render(){
+  const isMapel=typeChips[1].getAttribute("aria-pressed")==="true";
+  mapelBox.hidden=!isMapel;
+  typeNote.textContent=isMapel?"Pendampingan mata pelajaran sekolah sesuai kebutuhan siswa.":"Calistung: membaca, menulis, dan berhitung.";
+  const jenis=isMapel?`kelas mata pelajaran (${mapel.value.trim()||"…"})`:"kelas calistung (baca, tulis, hitung)";
   chips.forEach((c,i)=>{const on=c.getAttribute("aria-pressed")==="true";pills[i][0].setAttribute("fill",on?"#f2b632":"none");pills[i][1].setAttribute("fill",on?"#0f4c45":"#f2b632")});
   const hari=chips.filter(c=>c.getAttribute("aria-pressed")==="true").map(c=>c.dataset.v);
-  msg.textContent=`Assalamu'alaikum Wr. Wb.\nYth. Bunda Iin,\nSaya ingin menanyakan layanan les privat ke rumah untuk anak saya (${kelas.value.trim()||"kelas …"}).\nHari: ${hari.length?hari.join(" atau "):"fleksibel"}, sore hari.\nLokasi: ${lokasi.value.trim()||"…"}.\nApakah masih tersedia jadwal kosong? Terima kasih atas perhatiannya.`;
+  msg.textContent=`Assalamu'alaikum Wr. Wb.\nYth. Bunda Iin,\nSaya ingin menanyakan layanan les privat ke rumah untuk anak saya (${kelas.value.trim()||"kelas …"}).\nJenis kelas: ${jenis}.\nHari: ${hari.length?hari.join(" atau "):"fleksibel"}, sore hari.\nLokasi: ${lokasi.value.trim()||"…"}.\nApakah masih tersedia jadwal kosong? Terima kasih atas perhatiannya.`;
   document.getElementById("wa").href="https://wa.me/6282323033171?text="+encodeURIComponent(msg.textContent);
 }
 chips.forEach(c=>c.addEventListener("click",()=>{c.setAttribute("aria-pressed",c.getAttribute("aria-pressed")==="true"?"false":"true");render()}));
+typeChips.forEach((c,i)=>c.addEventListener("click",()=>{typeChips.forEach((o,j)=>o.setAttribute("aria-pressed",String(i===j)));render()}));
+mapel.addEventListener("input",render);
 kelas.addEventListener("input",render);lokasi.addEventListener("input",render);
 document.getElementById("copy").addEventListener("click",()=>{
   const ok=document.getElementById("ok");
